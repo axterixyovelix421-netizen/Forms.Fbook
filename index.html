@@ -4,8 +4,6 @@
 
 <head>
 
-  <base target="_top">
-
   <meta charset="UTF-8">
 
   <meta
@@ -13,7 +11,14 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Formulario de contacto</title>
+  <meta
+    name="description"
+    content="Formulario de contacto"
+  >
+
+  <title>
+    Formulario de contacto
+  </title>
 
 
   <style>
@@ -29,6 +34,14 @@
 
       min-height: 100vh;
 
+      padding: 20px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
       font-family:
         Arial,
         Helvetica,
@@ -41,14 +54,6 @@
           #dce2e8
         );
 
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      padding: 20px;
-
       color: #1f2937;
 
     }
@@ -60,33 +65,27 @@
 
       max-width: 430px;
 
-      background: #ffffff;
-
-      border-radius: 16px;
-
       padding: 32px;
 
+      background: #ffffff;
+
+      border-radius: 18px;
+
       box-shadow:
-        0 10px 35px
-        rgba(0, 0, 0, 0.12);
+        0 15px 45px
+        rgba(0, 0, 0, 0.14);
 
     }
 
 
     .icono {
 
-      width: 58px;
+      width: 60px;
 
-      height: 58px;
+      height: 60px;
 
       margin:
         0 auto 18px;
-
-      border-radius: 50%;
-
-      background: #2563eb;
-
-      color: #ffffff;
 
       display: flex;
 
@@ -94,7 +93,18 @@
 
       justify-content: center;
 
-      font-size: 24px;
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #2563eb,
+          #1d4ed8
+        );
+
+      color: #ffffff;
+
+      font-size: 25px;
 
       font-weight: bold;
 
@@ -103,7 +113,8 @@
 
     h1 {
 
-      margin: 0 0 10px;
+      margin:
+        0 0 10px;
 
       text-align: center;
 
@@ -156,9 +167,10 @@
 
       width: 100%;
 
-      height: 48px;
+      height: 50px;
 
-      padding: 0 14px;
+      padding:
+        0 14px;
 
       border:
         1px solid #d1d5db;
@@ -193,11 +205,18 @@
 
       height: 50px;
 
+      margin-top: 4px;
+
       border: none;
 
       border-radius: 9px;
 
-      background: #2563eb;
+      background:
+        linear-gradient(
+          135deg,
+          #2563eb,
+          #1d4ed8
+        );
 
       color: #ffffff;
 
@@ -210,16 +229,9 @@
     }
 
 
-    button:hover {
-
-      background: #1d4ed8;
-
-    }
-
-
     button:disabled {
 
-      background: #9ca3af;
+      opacity: 0.6;
 
       cursor: not-allowed;
 
@@ -232,7 +244,7 @@
 
       margin-top: 18px;
 
-      padding: 13px;
+      padding: 14px;
 
       border-radius: 9px;
 
@@ -240,14 +252,19 @@
 
       font-size: 14px;
 
-      line-height: 1.4;
+      line-height: 1.45;
+
+    }
+
+
+    .mensaje.mostrado {
+
+      display: block;
 
     }
 
 
     .mensaje.enviando {
-
-      display: block;
 
       background: #eff6ff;
 
@@ -258,8 +275,6 @@
 
     .mensaje.correcto {
 
-      display: block;
-
       background: #ecfdf5;
 
       color: #047857;
@@ -268,8 +283,6 @@
 
 
     .mensaje.error {
-
-      display: block;
 
       background: #fef2f2;
 
@@ -301,7 +314,7 @@
 
     .pie {
 
-      margin-top: 22px;
+      margin-top: 20px;
 
       text-align: center;
 
@@ -311,7 +324,6 @@
 
     }
 
-
   </style>
 
 </head>
@@ -320,7 +332,7 @@
 <body>
 
 
-  <div class="contenedor">
+  <main class="contenedor">
 
 
     <div class="icono">
@@ -338,7 +350,10 @@
     </p>
 
 
-    <form id="formulario">
+    <form
+      id="formulario"
+      autocomplete="on"
+    >
 
 
       <div class="grupo">
@@ -412,30 +427,58 @@
     </div>
 
 
-  </div>
+  </main>
 
 
   <script>
 
 
+    // ========================================================
+    // URL DE GOOGLE APPS SCRIPT
+    // ========================================================
+
+    const URL_APPS_SCRIPT =
+      "https://script.google.com/macros/s/AKfycbw7oPbIaUXSVG8OnMpPpI45x6PH8N7ZeukyG5OoMfeGQYJc_7-102L8ONdTxEeAMQwR/exec";
+
+
+    // ⬆️⬆️⬆️ ESTA ES LA ZONA DONDE PEGAS LA URL
+    // QUE TE DA GOOGLE APPS SCRIPT.
+    //
+    // SI CREAS OTRA IMPLEMENTACIÓN EN EL FUTURO,
+    // SUSTITUYES SOLAMENTE ESA URL.
+    // ========================================================
+
+
+
     const formulario =
-      document.getElementById("formulario");
+      document.getElementById(
+        "formulario"
+      );
 
 
     const nombre =
-      document.getElementById("nombre");
+      document.getElementById(
+        "nombre"
+      );
 
 
     const apellidos =
-      document.getElementById("apellidos");
+      document.getElementById(
+        "apellidos"
+      );
 
 
     const botonEnviar =
-      document.getElementById("botonEnviar");
+      document.getElementById(
+        "botonEnviar"
+      );
 
 
     const mensaje =
-      document.getElementById("mensaje");
+      document.getElementById(
+        "mensaje"
+      );
+
 
 
     formulario.addEventListener(
@@ -458,8 +501,9 @@
           !apellidosValor
         ) {
 
-          mostrarError(
-            "Debes completar los dos campos."
+          mostrarMensaje(
+            "Debes completar Nombre y Apellidos.",
+            "error"
           );
 
           return;
@@ -473,83 +517,102 @@
           "Enviando...";
 
 
-        mensaje.className =
-          "mensaje enviando";
-
-        mensaje.textContent =
-          "Enviando tus datos...";
-
-
-        google.script.run
-
-          .withSuccessHandler(
-            function(respuesta) {
-
-              if (
-                respuesta &&
-                respuesta.ok
-              ) {
-
-                mensaje.className =
-                  "mensaje correcto";
-
-                mensaje.textContent =
-                  respuesta.mensaje;
-
-                formulario.reset();
-
-              } else {
-
-                mostrarError(
-                  respuesta &&
-                  respuesta.mensaje
-                    ? respuesta.mensaje
-                    : "No se pudieron enviar los datos."
-                );
-
-              }
+        mostrarMensaje(
+          "Enviando tus datos...",
+          "enviando"
+        );
 
 
-              botonEnviar.disabled = false;
 
-              botonEnviar.textContent =
-                "Enviar datos";
-
-            }
-          )
-
-          .withFailureHandler(
-            function(error) {
-
-              mostrarError(
-                error &&
-                error.message
-                  ? error.message
-                  : "Se produjo un error al enviar los datos."
-              );
+        const datos =
+          new URLSearchParams();
 
 
-              botonEnviar.disabled = false;
+        datos.append(
+          "nombre",
+          nombreValor
+        );
 
-              botonEnviar.textContent =
-                "Enviar datos";
 
-            }
-          )
+        datos.append(
+          "apellidos",
+          apellidosValor
+        );
 
-          .enviarDatos(
-            nombreValor,
-            apellidosValor
-          );
+
+
+        fetch(
+          URL_APPS_SCRIPT,
+          {
+
+            method: "POST",
+
+            mode: "no-cors",
+
+            body: datos
+
+          }
+        )
+
+        .then(
+          function() {
+
+            formulario.reset();
+
+
+            mostrarMensaje(
+              "Los datos se han enviado correctamente.",
+              "correcto"
+            );
+
+
+            botonEnviar.disabled =
+              false;
+
+
+            botonEnviar.textContent =
+              "Enviar datos";
+
+          }
+        )
+
+        .catch(
+          function(error) {
+
+            console.error(
+              error
+            );
+
+
+            mostrarMensaje(
+              "No se pudieron enviar los datos. Inténtalo de nuevo.",
+              "error"
+            );
+
+
+            botonEnviar.disabled =
+              false;
+
+
+            botonEnviar.textContent =
+              "Enviar datos";
+
+          }
+        );
 
       }
     );
 
 
-    function mostrarError(texto) {
+
+    function mostrarMensaje(
+      texto,
+      tipo
+    ) {
 
       mensaje.className =
-        "mensaje error";
+        "mensaje mostrado " +
+        tipo;
 
       mensaje.textContent =
         texto;
