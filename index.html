@@ -4,29 +4,53 @@
 
 <head>
 
+  <!-- ======================================================
+       CONFIGURACIÓN GENERAL DE LA PÁGINA
+       ====================================================== -->
+
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
 
-  <meta
-    name="description"
-    content="Formulario de contacto"
-  >
+>
+
+  <!-- DESCRIPCIÓN PARA GOOGLE -->
+
+<meta
+name="description"
+content="Formulario de contacto"
+
+>
+
+  <!-- TÍTULO QUE APARECE EN LA PESTAÑA DEL NAVEGADOR -->
 
   <title>
     Formulario de contacto
   </title>
 
+  <!-- ======================================================
+       DISEÑO / CSS
+       ====================================================== -->
 
   <style>
+
+
+    /* ======================================================
+       CONFIGURACIÓN GENERAL
+       ====================================================== */
 
     * {
       box-sizing: border-box;
     }
 
+
+    /* ======================================================
+       FONDO GENERAL DE LA PÁGINA
+
+       AQUÍ PUEDES CAMBIAR EL FONDO
+       ====================================================== */
 
     body {
 
@@ -59,6 +83,16 @@
     }
 
 
+    /* ======================================================
+       CAJA PRINCIPAL DEL FORMULARIO
+
+       AQUÍ PUEDES CAMBIAR:
+       - ANCHO
+       - FONDO
+       - BORDES
+       - SOMBRA
+       ====================================================== */
+
     .contenedor {
 
       width: 100%;
@@ -77,6 +111,15 @@
 
     }
 
+
+    /* ======================================================
+       ICONO CIRCULAR
+
+       SI NO QUIERES EL ICONO "C",
+       PUEDES OCULTARLO CON:
+
+       display: none;
+       ====================================================== */
 
     .icono {
 
@@ -111,6 +154,10 @@
     }
 
 
+    /* ======================================================
+       TÍTULO PRINCIPAL
+       ====================================================== */
+
     h1 {
 
       margin:
@@ -124,6 +171,55 @@
 
     }
 
+
+    /* ======================================================
+       IMAGEN / MINIATURA DEL FORMULARIO
+
+       ESTA ES LA NUEVA SECCIÓN.
+
+       LA IMAGEN APARECERÁ DEBAJO DEL TÍTULO.
+
+       PUEDES CAMBIAR EL TAMAÑO DESDE AQUÍ.
+       ====================================================== */
+
+    .imagen-formulario {
+
+      width: 100%;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      margin:
+        8px 0 20px;
+
+    }
+
+
+    .imagen-formulario img {
+
+      width: 90px;
+
+      height: 90px;
+
+      object-fit: cover;
+
+      border-radius: 12px;
+
+      display: block;
+
+      box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.12);
+
+    }
+
+
+    /* ======================================================
+       DESCRIPCIÓN
+       ====================================================== */
 
     .descripcion {
 
@@ -141,12 +237,20 @@
     }
 
 
+    /* ======================================================
+       GRUPOS DE CAMPOS
+       ====================================================== */
+
     .grupo {
 
       margin-bottom: 18px;
 
     }
 
+
+    /* ======================================================
+       ETIQUETAS
+       ====================================================== */
 
     label {
 
@@ -162,6 +266,10 @@
 
     }
 
+
+    /* ======================================================
+       CAMPOS DE TEXTO
+       ====================================================== */
 
     input {
 
@@ -188,6 +296,10 @@
     }
 
 
+    /* ======================================================
+       CAMPOS CUANDO EL USUARIO LOS SELECCIONA
+       ====================================================== */
+
     input:focus {
 
       border-color: #2563eb;
@@ -198,6 +310,10 @@
 
     }
 
+
+    /* ======================================================
+       BOTÓN ENVIAR
+       ====================================================== */
 
     button {
 
@@ -229,6 +345,8 @@
     }
 
 
+    /* BOTÓN DESACTIVADO MIENTRAS ENVÍA */
+
     button:disabled {
 
       opacity: 0.6;
@@ -237,6 +355,10 @@
 
     }
 
+
+    /* ======================================================
+       MENSAJES DEL FORMULARIO
+       ====================================================== */
 
     .mensaje {
 
@@ -264,6 +386,8 @@
     }
 
 
+    /* MENSAJE "ENVIANDO..." */
+
     .mensaje.enviando {
 
       background: #eff6ff;
@@ -272,6 +396,8 @@
 
     }
 
+
+    /* MENSAJE CORRECTO */
 
     .mensaje.correcto {
 
@@ -282,6 +408,8 @@
     }
 
 
+    /* MENSAJE DE ERROR */
+
     .mensaje.error {
 
       background: #fef2f2;
@@ -290,6 +418,10 @@
 
     }
 
+
+    /* ======================================================
+       AVISO INFORMATIVO
+       ====================================================== */
 
     .informacion {
 
@@ -312,6 +444,10 @@
     }
 
 
+    /* ======================================================
+       PIE DEL FORMULARIO
+       ====================================================== */
+
     .pie {
 
       margin-top: 20px;
@@ -324,131 +460,244 @@
 
     }
 
+
   </style>
 
 </head>
 
-
 <body>
 
+  <!-- ======================================================
+       CONTENEDOR PRINCIPAL
+       ====================================================== -->
 
   <main class="contenedor">
 
+```
+<!-- ====================================================
+     ICONO
 
-    <div class="icono">
-      C
-    </div>
+     CAMBIA LA LETRA "C" POR LA QUE QUIERAS.
+
+     POR EJEMPLO:
+
+     S
+
+     STRANGIS
+
+     O ELIMINA TODO EL BLOQUE SI NO LO QUIERES.
+     ==================================================== -->
+
+<div class="">
+  
+</div>
 
 
-    <h1>
-      Formulario de contacto
-    </h1>
+<!-- ====================================================
+     TÍTULO DEL FORMULARIO
+
+     CAMBIA ESTE TEXTO SI QUIERES.
+     ==================================================== -->
+
+<h1>
+  Formulario de contacto
+</h1>
 
 
-    <p class="descripcion">
-      Completa tus datos para enviar tu solicitud.
-    </p>
+<!-- ====================================================
+     IMAGEN EN MINIATURA
+
+     ====================================================
+
+     ⭐⭐⭐ AQUÍ PONES LA IMAGEN ⭐⭐⭐
+
+     CAMBIA:
+
+     AQUI_PONES_LA_URL_DE_TU_IMAGEN
+
+     POR LA URL REAL DE TU IMAGEN.
+
+     EJEMPLO:
+
+     https://tusitio.com/logo.png
+
+     ==================================================== -->
+
+<div class="imagen-formulario">
+
+  <img
+    src="AQUI_PONES_LA_URL_DE_TU_IMAGEN"
+    alt="Imagen del formulario"
+  >
+
+</div>
 
 
-    <form
-      id="formulario"
-      autocomplete="on"
+<!-- ====================================================
+     TEXTO DESCRIPTIVO
+
+     CAMBIA ESTE TEXTO SI QUIERES.
+     ==================================================== -->
+
+<p class="descripcion">
+
+  Completa tus datos para enviar tu solicitud.
+
+</p>
+
+
+<!-- ====================================================
+     FORMULARIO
+     ==================================================== -->
+
+<form
+  id="formulario"
+  autocomplete="on"
+>
+
+
+  <!-- ==================================================
+       CAMPO NOMBRE
+       ================================================== -->
+
+  <div class="grupo">
+
+    <label for="nombre">
+
+      Nombre
+
+    </label>
+
+    <input
+      type="text"
+      id="nombre"
+      name="nombre"
+      placeholder="Escribe tu nombre"
+      autocomplete="given-name"
+      maxlength="100"
+      required
     >
 
-
-      <div class="grupo">
-
-        <label for="nombre">
-          Nombre
-        </label>
-
-        <input
-          type="text"
-          id="nombre"
-          name="nombre"
-          placeholder="Escribe tu nombre"
-          autocomplete="given-name"
-          maxlength="100"
-          required
-        >
-
-      </div>
+  </div>
 
 
-      <div class="grupo">
+  <!-- ==================================================
+       CAMPO APELLIDOS
+       ================================================== -->
 
-        <label for="apellidos">
-          Apellidos
-        </label>
+  <div class="grupo">
 
-        <input
-          type="text"
-          id="apellidos"
-          name="apellidos"
-          placeholder="Escribe tus apellidos"
-          autocomplete="family-name"
-          maxlength="150"
-          required
-        >
+    <label for="apellidos">
 
-      </div>
+      Apellidos
 
+    </label>
 
-      <button
-        type="submit"
-        id="botonEnviar"
-      >
-        Enviar datos
-      </button>
+    <input
+      type="text"
+      id="apellidos"
+      name="apellidos"
+      placeholder="Escribe tus apellidos"
+      autocomplete="family-name"
+      maxlength="150"
+      required
+    >
+
+  </div>
 
 
-    </form>
+  <!-- ==================================================
+       BOTÓN ENVIAR
+       ================================================== -->
+
+  <button
+    type="submit"
+    id="botonEnviar"
+  >
+
+    Enviar datos
+
+  </button>
 
 
-    <div
-      id="mensaje"
-      class="mensaje"
-    ></div>
+</form>
 
 
-    <div class="informacion">
+<!-- ====================================================
+     MENSAJE DE ESTADO
+     ==================================================== -->
 
-      Los datos introducidos se utilizarán
-      únicamente para gestionar esta solicitud
-      y contactar contigo cuando sea necesario.
+<div
+  id="mensaje"
+  class="mensaje"
+></div>
 
-    </div>
+
+<!-- ====================================================
+     AVISO INFORMATIVO
+
+     PUEDES CAMBIAR ESTE TEXTO.
+     ==================================================== -->
+
+<div class="informacion">
+
+  Los datos introducidos se utilizarán
+  únicamente para gestionar esta solicitud
+  y contactar contigo cuando sea necesario.
+
+</div>
 
 
-    <div class="pie">
+<!-- ====================================================
+     PIE
 
-      Formulario de contacto
+     PUEDES CAMBIAR ESTE TEXTO.
+     ==================================================== -->
 
-    </div>
+<div class="pie">
 
+  Formulario de contacto
+
+</div>
+```
 
   </main>
 
+  <!-- ======================================================
+       JAVASCRIPT
+       ====================================================== -->
 
   <script>
 
 
-    // ========================================================
+    // ======================================================
     // URL DE GOOGLE APPS SCRIPT
-    // ========================================================
+    // ======================================================
+
+    /*
+       ⭐⭐⭐ ESTA ES UNA DE LAS PARTES MÁS IMPORTANTES ⭐⭐⭐
+
+       AQUÍ VA LA URL /exec QUE TE DA GOOGLE APPS SCRIPT.
+
+       TU URL ACTUAL ESTÁ PUESTA AQUÍ.
+    */
 
     const URL_APPS_SCRIPT =
       "https://script.google.com/macros/s/AKfycbw7oPbIaUXSVG8OnMpPpI45x6PH8N7ZeukyG5OoMfeGQYJc_7-102L8ONdTxEeAMQwR/exec";
 
 
-    // ⬆️⬆️⬆️ ESTA ES LA ZONA DONDE PEGAS LA URL
-    // QUE TE DA GOOGLE APPS SCRIPT.
-    //
-    // SI CREAS OTRA IMPLEMENTACIÓN EN EL FUTURO,
-    // SUSTITUYES SOLAMENTE ESA URL.
-    // ========================================================
+    /*
+       SI EN EL FUTURO GOOGLE TE DA OTRA URL:
+
+       1. BORRA LA URL ANTERIOR.
+       2. PEGA LA NUEVA.
+       3. NO CAMBIES NADA MÁS DE ESTA PARTE.
+    */
 
 
+    // ======================================================
+    // CONECTAR CON LOS ELEMENTOS DEL FORMULARIO
+    // ======================================================
 
     const formulario =
       document.getElementById(
@@ -480,21 +729,39 @@
       );
 
 
+    // ======================================================
+    // DETECTAR CUANDO SE PULSA "ENVIAR DATOS"
+    // ======================================================
 
     formulario.addEventListener(
       "submit",
       function(event) {
 
+
+        // EVITAR QUE LA PÁGINA SE RECARGUE
+
         event.preventDefault();
 
+
+        // ==================================================
+        // RECOGER NOMBRE
+        // ==================================================
 
         const nombreValor =
           nombre.value.trim();
 
 
+        // ==================================================
+        // RECOGER APELLIDOS
+        // ==================================================
+
         const apellidosValor =
           apellidos.value.trim();
 
+
+        // ==================================================
+        // COMPROBAR QUE LOS DOS CAMPOS ESTÁN COMPLETOS
+        // ==================================================
 
         if (
           !nombreValor ||
@@ -511,11 +778,19 @@
         }
 
 
+        // ==================================================
+        // DESACTIVAR BOTÓN
+        // ==================================================
+
         botonEnviar.disabled = true;
 
         botonEnviar.textContent =
           "Enviando...";
 
+
+        // ==================================================
+        // MOSTRAR MENSAJE DE ENVÍO
+        // ==================================================
 
         mostrarMensaje(
           "Enviando tus datos...",
@@ -523,6 +798,9 @@
         );
 
 
+        // ==================================================
+        // PREPARAR LOS DATOS
+        // ==================================================
 
         const datos =
           new URLSearchParams();
@@ -540,6 +818,9 @@
         );
 
 
+        // ==================================================
+        // ENVIAR A GOOGLE APPS SCRIPT
+        // ==================================================
 
         fetch(
           URL_APPS_SCRIPT,
@@ -554,17 +835,29 @@
           }
         )
 
+
+        // ==================================================
+        // SI LA PETICIÓN TERMINA
+        // ==================================================
+
         .then(
           function() {
 
+
+            // LIMPIAR FORMULARIO
+
             formulario.reset();
 
+
+            // MOSTRAR MENSAJE CORRECTO
 
             mostrarMensaje(
               "Los datos se han enviado correctamente.",
               "correcto"
             );
 
+
+            // ACTIVAR BOTÓN
 
             botonEnviar.disabled =
               false;
@@ -576,10 +869,17 @@
           }
         )
 
+
+        // ==================================================
+        // SI HAY UN ERROR
+        // ==================================================
+
         .catch(
           function(error) {
 
+
             console.error(
+              "Error:",
               error
             );
 
@@ -604,15 +904,20 @@
     );
 
 
+    // ======================================================
+    // FUNCIÓN PARA MOSTRAR MENSAJES
+    // ======================================================
 
     function mostrarMensaje(
       texto,
       tipo
     ) {
 
+
       mensaje.className =
         "mensaje mostrado " +
         tipo;
+
 
       mensaje.textContent =
         texto;
@@ -621,7 +926,6 @@
 
 
   </script>
-
 
 </body>
 
